@@ -1,9 +1,9 @@
-package tools;
+package Utils;
 
 import java.io.InputStream;
 import java.util.Scanner;
 
-import static tools.Print.*;
+import static Utils.Print.*;
 
 /**
  * @author Yasin Zhang
