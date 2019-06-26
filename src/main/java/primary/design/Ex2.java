@@ -11,6 +11,8 @@ import java.util.Stack;
  *
  * 方法1(复杂，空间使用少)：通过存入x-min实现，每次pop时判断返回值正负，正值说明压入数据时min没有变化，
  *                      负值说明压入数据时min变化，则更新min(min=min-pop())
+ *                      PS: 使用long之后似乎也没有多好
+ *
  * 方法2(简单，空间使用大)：通过两个栈实现，数据栈+最小值栈（每次最小值更新时入栈）
  *
  * @author Yasin Zhang

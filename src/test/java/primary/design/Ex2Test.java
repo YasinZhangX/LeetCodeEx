@@ -1,32 +1,37 @@
 package primary.design;
 
+import Utils.TestUtils;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Yasin Zhang
  */
 public class Ex2Test {
 
-    Ex2 ex2 = new Ex2();
+    private TestUtils testUtils;
 
     @Before
     public void before() {
+        String callMethods ="[\"push\",\"push\",\"push\",\"getMin\",\"pop\",\"top\",\"getMin\"]";
+        String callParams = "[[],[-2],[0],[-3],[],[],[],[]]";
 
+        testUtils = new TestUtils(Ex2.class, callMethods, callParams);
     }
 
     @Test
     public void test() {
-        ex2.push(2147483647);
-        System.out.println("top: " + ex2.top());
-        System.out.println("getMin: " + ex2.getMin());
-        ex2.push(-2147483648);
-        System.out.println("top: " + ex2.top());
-        System.out.println("getMin: " + ex2.getMin());
-        ex2.pop();
-        System.out.println("getMin: " + ex2.getMin());
+        try {
+            String result = testUtils.call();
+            System.out.println(result);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
