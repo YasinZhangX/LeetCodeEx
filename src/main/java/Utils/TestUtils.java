@@ -95,9 +95,7 @@ public class TestUtils {
         for (int i = 0; i < size; i++) {
             Object ret = callMethodList.get(i).invoke(obj, paramsList.get(i));
             sb.append("[");
-            if (ret instanceof Integer) {
-                sb.append(ret);
-            }
+            sb.append(ret);
             sb.append("]");
             if (i != size-1) {
                 sb.append(",");

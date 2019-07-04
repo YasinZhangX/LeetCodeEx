@@ -23,7 +23,7 @@ public class Ex1 {
         return nums;
     }
 
-    /** Returns a random shuffling of the array. */
+    /* Returns a random shuffling of the array. */
     /**
      * 我的解答基于获取多个不重复的数
      * 更好的方法是通过抽奖思想,数组的每一个位置都相当于从集合中抽取一个数, 见shuffle_best
