@@ -51,7 +51,7 @@ public class TestUtils {
 
         String[] callParamsForSignalMethod = callParams.substring(1, callParams.length()-1).split(",");
         for (String paramString : callParamsForSignalMethod) {
-            String[] paramStrings = paramString.substring(1, paramString.length()-1).split(",");
+            String[] paramStrings = paramString.substring(1, paramString.length()-1).split("/");
             paramsList.add(getParamObjects(paramStrings));
         }
 
@@ -64,7 +64,12 @@ public class TestUtils {
             if (paramString.length() == 0) {
                 continue;
             }
-            objectList.add(Integer.parseInt(paramString));
+            if (paramString.startsWith("\"")) {  // string
+                objectList.add(paramString.substring(1, paramString.length()-1));
+            } else { // int
+                objectList.add(Integer.parseInt(paramString));
+            }
+
         }
 
         return objectList.toArray(new Object[0]);
