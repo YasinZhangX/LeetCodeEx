@@ -1,5 +1,9 @@
 #JAVA
 
+# gradle
+.gradle/
+build/
+
 # Compiled class file
 *.class
 
@@ -43,7 +47,6 @@ tmp/
 *.swp
 *~.nib
 local.properties
-.settings/
 .loadpath
 .recommenders
 
