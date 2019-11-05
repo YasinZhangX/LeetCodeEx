@@ -1,16 +1,11 @@
 package medium;
 
+import common.ListNode;
+
 /**
  * @author Yasin Zhang
  */
 public class AddTwoNumbers {
-
-    //Definition for singly-linked list.
-    public class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
-    }
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode preRet = new ListNode(0);
