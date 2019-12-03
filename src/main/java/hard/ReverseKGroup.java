@@ -27,9 +27,8 @@ public class ReverseKGroup {
         ListNode next = preNext.next;
         ListNode afterHead = k > 2 ? head.next : head;
         preHead.next = next;
-        preNext.next = head;
-        head.next = recurseReverse(next, k);
-        reverse(head, )
+        ListNode pre = recurseReverse(next, k);
+        reverse(pre, head, next);
 
         return next;
     }
@@ -48,10 +47,10 @@ public class ReverseKGroup {
         return curNode;
     }
 
-    private ListNode reverse(ListNode startNode, ListNode stopNode) {
-        ListNode pre = null;
+    private ListNode reverse(ListNode stopNext, ListNode startNode, ListNode stopNode) {
+        ListNode pre = stopNext;
         ListNode curr = startNode;
-        while (curr != stopNode) {
+        while (curr != stopNext) {
             ListNode next = curr.next;
             curr.next = pre;
             pre = curr;
