@@ -9,15 +9,15 @@ public class MoreThanHalfNum {
     public int solution(int [] array) {
         HashMap<Integer, Integer> counter = new HashMap<>();
 
-        for (int i = 0; i < array.length; i++) {
+        for (int value : array) {
             int times = 1;
-            if (counter.containsKey(array[i])) {
-                times = counter.get(array[i]) + 1;
+            if (counter.containsKey(value)) {
+                times = counter.get(value) + 1;
             }
-            counter.put(array[i], times);
+            counter.put(value, times);
 
-            if (times > array.length/2) {
-                return array[i];
+            if (times > array.length / 2) {
+                return value;
             }
         }
 
