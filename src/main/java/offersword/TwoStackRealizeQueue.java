@@ -11,23 +11,17 @@ public class TwoStackRealizeQueue {
 
     public void push(int node) {
         if (!stack2.isEmpty()) {
-            for (int i = 0; i < stack2.size(); i++) {
+            while (!stack2.isEmpty()) {
                 stack1.push(stack2.pop());
             }
         }
-
         stack1.push(node);
     }
 
     public int pop() {
         if (stack2.isEmpty()) {
-            if (stack1.isEmpty()) {
-                throw new RuntimeException("empty stack");
-            } else {
-                int size = stack1.size();
-                for (int i = 0; i < size; i++) {
-                    stack2.push(stack1.pop());
-                }
+            while (!stack1.isEmpty()) {
+                stack2.push(stack1.pop());
             }
         }
 
