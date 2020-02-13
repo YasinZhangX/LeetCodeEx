@@ -7,7 +7,7 @@ package offersword;
  */
 public class JumpFloorII {
 
-    public int Solution(int target) {
+    public int solution(int target) {
         if (target == 0) {
             return 0;
         } else if (target == 1) {
@@ -16,7 +16,7 @@ public class JumpFloorII {
 
         int sum = 1;
         for (int i = target - 1; i >= 0; i--) {
-            sum = sum + Solution(i);
+            sum = sum + solution(i);
         }
 
         return sum;

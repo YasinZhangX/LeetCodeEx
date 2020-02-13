@@ -19,4 +19,24 @@ public class JumpFloor {
         return Solution(target - 1) + Solution(target - 2);
     }
 
+    public int solution_better(int target) {
+        if (target == 0) {
+            return 0;
+        } else if (target == 1) {
+            return 1;
+        } else if (target == 2) {
+            return 2;
+        }
+
+        int[] result = {1, 2};
+        for (int i = 3; i <= target; i++) {
+            int fibN = result[0] + result[1];
+
+            result[0] = result[1];
+            result[1] = fibN;
+        }
+
+        return result[1];
+    }
+
 }
