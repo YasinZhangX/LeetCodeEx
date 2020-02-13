@@ -22,4 +22,7 @@ public class JumpFloorII {
         return sum;
     }
 
+    public int solution_better(int target) {
+        return (int) Math.pow(2, target-1);
+    }
 }
