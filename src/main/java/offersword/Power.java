@@ -37,4 +37,33 @@ public class Power {
             }
         }
     }
+
+    public double solution_better(double base, int exponent) {
+        if (base == 0) {
+            return 0;
+        }
+
+        double result = powerWithNonNegativeExponent(base, Math.abs(exponent));
+        if (exponent < 0) {
+            result = 1.0 / result;
+        }
+
+        return result;
+    }
+
+    private double powerWithNonNegativeExponent(double base, int exponent) {
+        if (exponent == 0) {
+            return 1;
+        } else if (exponent == 1) {
+            return base;
+        }
+
+        double result = powerWithNonNegativeExponent(base, exponent >>> 1);
+        result = result * result;
+        if ((exponent & 1) != 0) {
+            result = result * base;
+        }
+
+        return result;
+    }
 }
