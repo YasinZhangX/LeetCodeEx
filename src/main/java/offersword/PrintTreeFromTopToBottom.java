@@ -2,13 +2,39 @@ package offersword;
 
 import common.TreeNode;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
  * @author Yasin Zhang
  */
-public class PrintFromTopToBottom {
+public class PrintTreeFromTopToBottom {
+    public ArrayList<Integer> solution_better(TreeNode root) {
+        if (root == null) {
+            return new ArrayList<>();
+        }
+
+        ArrayList<Integer> result = new ArrayList<>();
+        ArrayDeque<TreeNode> q = new ArrayDeque<>();
+        q.add(root);
+
+        while (!q.isEmpty()) {
+            TreeNode cur = q.poll();
+            result.add(cur.val);
+
+            if (cur.left != null) {
+                q.add(cur.left);
+            }
+
+            if (cur.right != null) {
+                q.add(cur.right);
+            }
+        }
+
+        return result;
+    }
+
     public ArrayList<Integer> solution(TreeNode root) {
         ArrayList<Integer> result = new ArrayList<>();
 
