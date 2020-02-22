@@ -43,4 +43,42 @@ public class Convert {
 
         return lastNodeInSublist;
     }
+
+    public TreeNode Convert(TreeNode pRootOfTree) {
+        if (pRootOfTree == null) {
+            return null;
+        }
+
+        convertToList(pRootOfTree, null);
+
+        TreeNode head = pRootOfTree;
+        while (head.left != null) {
+            head = head.left;
+        }
+
+        return head;
+    }
+
+    private TreeNode converToList(TreeNode curNode, TreeNode lastNodeInList) {
+        if (curNode == null) {
+            return null;
+        }
+
+        TreeNode newLastNode = lastNodeInList;
+        if (curNode.left != null) {
+            newLastNode = convertToList(curNode.left, lastNodeInList);
+        }
+
+        curNode.left = newLastNode;
+        if (newLastNode != null) {
+            newLastNode.right = curNode;
+        }
+
+        newLastNode = curNode;
+        if (curNode.right != null) {
+            convertToList(curNode.right, newLastNode);
+        }
+
+        return newLastNode;
+    }
 }
