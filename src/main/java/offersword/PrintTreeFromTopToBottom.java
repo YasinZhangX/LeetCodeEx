@@ -18,7 +18,6 @@ public class PrintTreeFromTopToBottom {
         ArrayList<Integer> result = new ArrayList<>();
         ArrayDeque<TreeNode> q = new ArrayDeque<>();
         q.add(root);
-
         while (!q.isEmpty()) {
             TreeNode cur = q.poll();
             result.add(cur.val);
