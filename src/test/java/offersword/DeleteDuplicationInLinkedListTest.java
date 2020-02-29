@@ -27,6 +27,6 @@ public class DeleteDuplicationInLinkedListTest {
         l4.next = l5;
 
         DeleteDuplicationInLinkedList alg = new DeleteDuplicationInLinkedList();
-        alg.deleteDuplication(l1);
+        alg.solution(l1);
     }
 }
