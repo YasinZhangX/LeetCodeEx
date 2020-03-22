@@ -12,7 +12,7 @@ public class LongestDupSubstringTest {
     @Test
     public void solution() {
         LongestDupSubstring alg = new LongestDupSubstring();
-        String result = alg.solution("banana");
+        String result = alg.longestDupSubstring("banana");
         System.out.println(result);
     }
 }
