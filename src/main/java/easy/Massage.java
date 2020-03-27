@@ -1,5 +1,7 @@
 package easy;
 
+import java.util.concurrent.LinkedBlockingQueue;
+
 /**
  * 按摩师
  * @author Yasin Zhang
