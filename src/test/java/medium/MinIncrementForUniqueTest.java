@@ -13,7 +13,7 @@ public class MinIncrementForUniqueTest {
     public void solution() {
         MinIncrementForUnique alg = new MinIncrementForUnique();
         int[] A = {3,2,1,2,1,7};
-        int result = alg.solution(A);
+        int result = alg.solution1(A);
         System.out.println(result);
     }
 }
