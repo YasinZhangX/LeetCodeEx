@@ -70,39 +70,41 @@ public class MinimumLengthEncoding {
         return a;
     }
 
-    public int solution_better(String[] words) {
-        TrieNode trie = new TrieNode();
-        Map<TrieNode, Integer> nodes = new HashMap();
+    // 字典树解法
+    public int minimumLengthEncoding(String[] words) {
+        HashMap<TireNode, Integer> nodeIndex = new HashMap<>();
 
-        for (int i = 0; i < words.length; ++i) {
+        TireNode root = new TireNode();
+        for (int i = 0; i < words.length; i++) {
             String word = words[i];
-            TrieNode cur = trie;
-            for (int j = word.length() - 1; j >= 0; --j)
-                cur = cur.get(word.charAt(j));
-            nodes.put(cur, i);
+            TireNode cur = root;
+            for (int j = word.length() - 1; j >= 0; j--) {
+                cur = cur.getChild(word.charAt(j));
+                nodeIndex.put(cur, i);
+            }
         }
 
-        int ans = 0;
-        for (TrieNode node: nodes.keySet()) {
-            if (node.count == 0)
-                ans += words[nodes.get(node)].length() + 1;
+        int res = 0;
+        for (TireNode node : nodeIndex.keySet()) {
+            if (node.childrenNum == 0) {
+                res = res + words[nodeIndex.get(node)].length() + 1;
+            }
         }
-        return ans;
+
+        return res;
     }
 
-    static class TrieNode {
-        TrieNode[] children;
-        int count;
-        TrieNode() {
-            children = new TrieNode[26];
-            count = 0;
-        }
-        public TrieNode get(char c) {
-            if (children[c - 'a'] == null) {
-                children[c - 'a'] = new TrieNode();
-                count++;
+    static class TireNode {
+        TireNode[] children = new TireNode[26];
+        int childrenNum = 0;
+
+        TireNode getChild(char ch) {
+            if (children['z'-ch] == null) {
+                children['z'-ch] = new TireNode();
+                childrenNum++;
             }
-            return children[c - 'a'];
+
+            return children['z'-ch];
         }
     }
 }
