@@ -15,4 +15,11 @@ public class SearchRangeTest {
         int[] nums = {5,7,7,8,8,10};
         alg.solution(nums, 8);
     }
+
+    @Test
+    public void searchRange() {
+        SearchRange alg = new SearchRange();
+        int[] nums = {5,7,7,8,8,10};
+        alg.searchRange(nums, 8);
+    }
 }
