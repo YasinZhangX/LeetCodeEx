@@ -29,4 +29,26 @@ public class ReverseInteger {
 
         return result * sign;
     }
+
+    public int reverse2(int x) {
+        if (x == Integer.MIN_VALUE) {
+            return 0;
+        }
+
+        int sign = (x >= 0) ? 1 : -1;
+        x = x * sign;
+        int result = 0;
+        while (x != 0) {
+            int b = x % 10;
+            long tmp = ((long)result * 10 + b);
+            if (tmp <= Integer.MAX_VALUE) {
+                result = (int)tmp;
+            } else {
+                return 0;
+            }
+            x = x / 10;
+        }
+
+        return result * sign;
+    }
 }

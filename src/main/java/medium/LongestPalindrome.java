@@ -57,7 +57,7 @@ public class LongestPalindrome {
 
     public static void main(String[] args) {
         LongestPalindrome alg = new LongestPalindrome();
-        String result =  alg.solutionDP("aaaa");
+        String result =  alg.solutionDP("babad");
         System.out.println(result);
     }
 }
