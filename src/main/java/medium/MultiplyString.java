@@ -35,4 +35,39 @@ public class MultiplyString {
 
         return str.toString();
     }
+
+    /**
+     * 思路相同，索引方向不一样
+     */
+    public String multiply2(String num1, String num2) {
+        if (num1.equals("0") || num2.equals("0")) {
+            return "0";
+        }
+
+        int len1 = num1.length();
+        int len2 = num2.length();
+        int len = num1.length() + num2.length();
+        int[] res = new int[len];
+        for (int i = len2-1; i >= 0; i--) {
+            int n2 = num2.charAt(i) - '0';
+            for (int j = len1-1; j >= 0; j--) {
+                int n1 = num1.charAt(j) - '0';
+                int sum = res[i + j + 1] + n1 * n2;
+                res[i + j + 1] = sum % 10;
+                res[i + j] += sum / 10;
+            }
+        }
+
+        int startIndex = 0;
+        while (res[startIndex] == 0) {
+            startIndex++;
+        }
+
+        StringBuilder builder = new StringBuilder();
+        for (int i = startIndex; i < len; i++) {
+            builder.append(res[i]);
+        }
+
+        return builder.toString();
+    }
 }
