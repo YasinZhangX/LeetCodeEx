@@ -14,4 +14,10 @@ public class LongestSubstrWithoutRepeatTest {
         LongestSubstrWithoutRepeat test = new LongestSubstrWithoutRepeat();
         System.out.println(test.lengthOfLongestSubstring("abba"));
     }
+
+    @Test
+    public void lengthOfLongestSubstring1() {
+        LongestSubstrWithoutRepeat test = new LongestSubstrWithoutRepeat();
+        System.out.println(test.lengthOfLongestSubstring1(" "));
+    }
 }

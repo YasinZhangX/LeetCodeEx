@@ -27,4 +27,29 @@ public class LongestSubstrWithoutRepeat {
 
         return maxSubStringSize;
     }
+
+    public int lengthOfLongestSubstring1(String s) {
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+
+        int[] count = new int[128];
+        char[] str = s.toCharArray();
+        int res = 0;
+        int left = 0;
+        count[str[left]]++;
+        for (int i = 1; i < str.length; i++) {
+            count[str[i]]++;
+
+            while (count[str[i]] > 1) {
+                count[str[left++]]--;
+            }
+
+            res = Math.max(res, i-left+1);
+        }
+
+        res = Math.max(res, str.length-left);
+
+        return res;
+    }
 }
