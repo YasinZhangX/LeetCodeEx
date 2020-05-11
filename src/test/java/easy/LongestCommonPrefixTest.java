@@ -16,4 +16,12 @@ public class LongestCommonPrefixTest {
         String result = test.longestCommonPrefix(strs);
         System.out.println(result);
     }
+
+    @Test
+    public void longestCommonPrefix_Trie() {
+        LongestCommonPrefix test = new LongestCommonPrefix();
+        String[] strs = {"bb","b"};
+        String result = test.longestCommonPrefix_Trie(strs);
+        System.out.println(result);
+    }
 }

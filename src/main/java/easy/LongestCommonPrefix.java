@@ -1,6 +1,7 @@
 package easy;
 
-import javax.swing.*;
+import common.Trie;
+import common.TrieNode;
 
 /**
  * @author Yasin Zhang
@@ -35,5 +36,30 @@ public class LongestCommonPrefix {
             }
         }
         return true;
+    }
+
+    public String longestCommonPrefix_Trie(String[] strs) {
+        Trie trie = new Trie();
+        for (String word : strs) {
+            trie.insert(word);
+        }
+
+        return getLongestPrefix(trie);
+    }
+
+    private String getLongestPrefix(Trie trie) {
+        TrieNode cur = trie.root;
+        StringBuilder builder = new StringBuilder();
+        while (cur.getChildNum() == 1 && !cur.getIsEnd()) {
+            TrieNode[] curNext = cur.getNext();
+            for (int i = 0; i < 26; i++) {
+                if (curNext[i] != null) {
+                    builder.append((char)('a' + i));
+                    cur = curNext[i];
+                    break;
+                }
+            }
+        }
+        return builder.toString();
     }
 }
