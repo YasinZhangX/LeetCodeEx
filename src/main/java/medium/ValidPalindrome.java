@@ -11,7 +11,7 @@ public class ValidPalindrome {
 
         char[] str = s.toCharArray();
         int left = 0;
-        int right = s.length();
+        int right = s.length()-1;
         while (left < right) {
             if (str[left] != str[right]) {
                 return isPalindrome(s, left+1, right)
