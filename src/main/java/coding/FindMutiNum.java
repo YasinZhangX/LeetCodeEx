@@ -16,7 +16,7 @@ public class FindMutiNum {
      */
     public int solution (int n) {
         ArrayList<Integer> factors = new ArrayList<>();
-        boolean added = false;
+        boolean added;
         while (n != 1) {
             added = false;
             for (int i = 2; i <= 9; i++) {
