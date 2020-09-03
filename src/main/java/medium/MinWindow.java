@@ -1,10 +1,7 @@
 package medium;
 
-import com.sun.deploy.net.proxy.pac.PACFunctionsImpl;
-
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 
 /**
  * 最小覆盖子串

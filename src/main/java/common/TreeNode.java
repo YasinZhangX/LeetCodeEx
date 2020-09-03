@@ -1,7 +1,5 @@
 package common;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.LinkedList;
 
 /**
@@ -15,7 +13,7 @@ public class TreeNode {
         val = x;
     }
 
-    public static TreeNode generateTree(Integer @NotNull [] nums) {
+    public static TreeNode generateTree(Integer[] nums) {
         TreeNode root = new TreeNode(nums[0]);
 
         LinkedList<TreeNode> queue = new LinkedList<>();
