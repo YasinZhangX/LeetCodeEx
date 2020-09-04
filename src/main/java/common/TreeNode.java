@@ -9,8 +9,25 @@ public class TreeNode {
     public int val;
     public TreeNode left = null;
     public TreeNode right = null;
+    public TreeNode parent = null;
     public TreeNode(int x) {
         val = x;
+    }
+
+    public TreeNode getLeft() {
+        return left;
+    }
+
+    public void setLeft(TreeNode left) {
+        this.left = left;
+    }
+
+    public TreeNode getRight() {
+        return right;
+    }
+
+    public void setRight(TreeNode right) {
+        this.right = right;
     }
 
     public static TreeNode generateTree(Integer[] nums) {
