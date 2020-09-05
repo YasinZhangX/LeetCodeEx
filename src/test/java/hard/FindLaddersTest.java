@@ -1,12 +1,9 @@
 package hard;
 
 import org.junit.Test;
-import org.omg.PortableServer.LIFESPAN_POLICY_ID;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * @author Yasin Zhang
