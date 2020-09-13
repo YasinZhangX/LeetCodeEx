@@ -1,13 +1,8 @@
 package primary.design;
 
-import Utils.TestUtils;
+import utils.TestUtils;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author Yasin Zhang

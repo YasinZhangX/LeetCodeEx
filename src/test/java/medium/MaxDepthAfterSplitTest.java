@@ -1,6 +1,6 @@
 package medium;
 
-import Utils.Print;
+import utils.Print;
 import org.junit.Test;
 
 /**

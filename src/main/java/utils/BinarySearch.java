@@ -1,7 +1,4 @@
-package Utils;
-
-import java.util.ArrayList;
-import java.util.Arrays;
+package utils;
 
 /**
  * @author Yasin Zhang

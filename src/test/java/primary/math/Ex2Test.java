@@ -1,6 +1,6 @@
 package primary.math;
 
-import Utils.TestUtils;
+import utils.TestUtils;
 import org.junit.Before;
 import org.junit.Test;
 

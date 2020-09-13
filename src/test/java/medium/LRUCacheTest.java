@@ -1,9 +1,8 @@
 package medium;
 
-import Utils.TestUtils;
+import utils.TestUtils;
 import org.junit.Before;
 import org.junit.Test;
-import primary.design.Ex2;
 
 /**
  * @author Yasin Zhang

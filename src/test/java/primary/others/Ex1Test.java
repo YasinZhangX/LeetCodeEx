@@ -1,6 +1,6 @@
 package primary.others;
 
-import Utils.TestUtils;
+import utils.TestUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

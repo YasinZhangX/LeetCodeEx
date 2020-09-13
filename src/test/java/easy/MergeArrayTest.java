@@ -1,9 +1,7 @@
 package easy;
 
-import Utils.Print;
+import utils.Print;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * @author Yasin Zhang

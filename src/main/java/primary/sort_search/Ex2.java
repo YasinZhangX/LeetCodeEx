@@ -1,6 +1,6 @@
 package primary.sort_search;
 
-import static Utils.Print.print;
+import static utils.Print.print;
 
 public class Ex2 {
     int badVer;

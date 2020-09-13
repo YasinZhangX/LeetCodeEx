@@ -1,6 +1,4 @@
-package Utils;
-
-import java.util.HashMap;
+package utils;
 
 /**
  * @author Yasin Zhang
