@@ -1,7 +1,5 @@
 package medium;
 
-import sun.jvm.hotspot.oops.CheckedExceptionElement;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
