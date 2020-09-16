@@ -14,11 +14,11 @@ public class LowestCommonAncestorTest {
     public void lowestCommonAncestor() {
         Integer[] nums = {3,5,1,6,2,0,8,null,null,7,4};
         TreeNode root = TreeNode.generateTree(nums);
-        TreeNode p = new TreeNode(5);
-        TreeNode q = new TreeNode(4);
+        TreeNode p = new TreeNode(4);
+        TreeNode q = new TreeNode(8);
 
         LowestCommonAncestor alg = new LowestCommonAncestor();
-        TreeNode result = alg.lowestCommonAncestor(root, p, q);
+        int result = alg.getDistance(root, p, q);
         System.out.println(result);
     }
 }
